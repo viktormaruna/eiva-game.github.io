@@ -1,0 +1,422 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <title>Eiva: Efficient Interactive Video Anotation</title>
+  <link href="css/style.css" media="all" rel="stylesheet" type="text/css">
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/move-top.js" type="text/javascript"></script>
+  <script src="js/easing.js" type="text/javascript"></script>
+  <script src="js/jquery.simpletip-1.3.1.js" type="text/javascript"></script>
+  <script src="js/responsiveslides.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){     
+                event.preventDefault();
+                var headerHeight = 0;
+                $('html, body').animate({scrollTop:($(this.hash).offset().top - headerHeight)}, 1000);
+            });
+
+            texts ={ 
+            "JS":"Je to proste najlepší vedúci na svete. ",
+            "VM":"Bakalárske štúdium absolvoval na Fakulte informačných technológií Vysokého učenia technického v Brne. Bakalársku prácu vypracoval na tému Predspracovanie a transformácia textových kolekcií dát, kde sa venoval získavaniu znalostí z textov.<br> Má skúsenosti s jazykmi Python, C, HTML a PHP.<br>Aktuálne pokračuje v štúdiu na FIIT STU v odbore Informačné systémy. ", 
+            "PJ":"Absolvoval bakalárske štúdium na STU FIIT v odbore PKKS. Prevažnú časť projektov riešil v C/C++. Obzvlášť rád vytváral projekty v Qt, vrátane bakalárskej práce, ktorá bola na tému Vizualizácia hazardov kombinačnej časti asynchrónnych obvodov. <br>Mimo školy opakovane upravoval webovú stránku (html,css,javascript). <br>Je fanúšikom (niekedy až moc veľkým) herného priemyslu a rekreačného športu.", 
+            "JK":"Absolvoval bakalárske štúdium na FIT VUT v Brne v študijnom programe Informačné technológie. Získal pri tom znalosti v programovacích jazykoch C, C++, C#, Java, HTML, Assembler, CSS, SQL, Perl, Python, PSQL, XSLT, XML, Lisp, Prolog, UML a LaTeX. Vypracoval a obhájil bakalársku prácu na tému Predikcia budúcej lokácie pohybujúceho sa objektu. Táto práca patí do oblasti dolovania znalostí z dát.<br>V súčasnosti pracuje pre spoločnosť vyvýjajúcu informačné systémy na platforme .Net na mieru.<br>Vo voľnom čase sa venuje športu.",
+            "JB":"Absolvent bakalárskeho štúdia na FIIT STU v odbore Informatika. Venuje sa prevažne práci v Linuxe, programovaniu v C++ a frameworku Qt. Nechýba mu ani zručnosť v bash a awk.<br>Aktuálne sa zaujíma o paralelné programovanie, o čom svedčí aj jeho výber Diplomového projektu Multiatribútové súbory a ich paralelné spracovanie. ",
+            "MC":"Bakalárske štúdium ukončil na FIIT STU v odbore Informatika. Počas štúdia získal skúsenosti s prácou v programovacích jazykoch C, Java a PHP. V bakalárskej práci sa venoval tvorbe reportingového systému založeného na PHP.<br> Popri štúdiu získal aj pracovné skúsenosti s prácou v medzinárodnom tíme.<br>Vo voľnom čase sa rád venuje rekreačne športu.",
+            "MV":"Bakalárske štúdium absolvoval na STU FIIT v odbore Počítačové a komunikačné systémy a siete. Témou jeho bakalárskej práce bolo Transportný protokol pre satelitné systémy.<br>Má pracovné skúsenosti v oblasti vývoja v Java (Applet, Servlet), C, C#, HTML, javascript a Drupal.<br>Medzi jeho záujmy patrí šport, konkrétnejšie hádzaná, futbal a tenis.",
+            "MK":"Absolvoval bakalárske štúdium na STU FIIT v odbore Informatika. Prevažnú časť projektov riešil v jazyku C# a pomocou technológie .NET. Rád sa zameriava na projekty z oblasti umelej inteligencie a počítačovej grafiky. Tomu svedčí aj bakalárska práca na tému Simuláci davu, kde simuloval správanie sa davu v nebezpečných situáciách vo viacpodlažnej horiacej budove. Simuloval emócie, fyzické schopnosti, vnútorný stav a sociálne vlastnosti na správanie sa ľudí v nebezpečnej situácii v hre.<br>Obzvlášť rád sa venuje návrhu a programovaniu hier, či už mobilných alebo desktopových. V minulosti bol zamestnaný ako herný vývojár v spoločnosti na vývoj mobilných hier v 2D. Taktiež získal cenné skúsenosti pri tvorbe 3D hier na nekomerčnom projekte, kde sa medzi inými naučil aj ako efektívne využívať fyziku v hrách.<br>Jeho entuziazmus pre počítačovú grafiku je prejavený aj výberom diplomovej práce na tému Rozpoznávanie obrazu pre stav hry.<br>Aktuálne pracuje ako webový developer, kde sa každodenne stretáva s technológiami ako HTML5, ASP.NET, Javascript a JQuery.<br>Medzi jeho záľuby patria aj adrenalínové športy, napríklad snowboarding.",
+            };
+
+            $( ".sub-about-grid" ).each(function() {
+
+                    $($( this )).simpletip({
+                    content: texts[$(this).attr('alias')],
+                    showEffect: 'slide',
+                    hideEffect: 'none',
+                    offset: [90, 0],
+                fixed: 'false'
+                });
+            });
+
+
+        });
+            
+
+        function sendMail() {
+         var link = "mailto:timovy-projekt-14-2013-2014@googlegroups.com"
+                     + "?cc=" + escape(document.getElementById('msg_email').value)
+                     + "&subject=" + escape(document.getElementById('msg_subject').value)
+                     + "&body=" + escape(document.getElementById('msg_message').value)
+            ;
+            window.location.href = link;
+        }
+
+
+  </script>
+  <script>
+// You can also use "$(window).load(function() {"
+    $(function () {
+      // Slideshow 2
+      $("#slider").responsiveSlides({
+        auto: true,             // Boolean: Animate automatically, true or false
+        speed: 0,            // Integer: Speed of the transition, in milliseconds
+        timeout: 3000,          // Integer: Time between slide transitions, in milliseconds
+        pager: true,           // Boolean: Show pager, true or false
+        pause: true,           // Boolean: Pause on hover, true or false
+        pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+        maxwidth: "540",           // Integer: Max-width of the slideshow, in pixels
+      });
+
+
+    });
+  </script>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type">
+</head>
+
+<body>
+  <!---start-wrap==-->
+
+  <div class="hrader-part" id="home">
+    <!---start-Header==-->
+
+    <div class="header">
+      <div class="wrap">
+        <!---start-logo==-->
+
+        <div class="logo">
+          <a href="#">Gwappers: <span>Eiva</span></a>
+        </div><!---End-logo==-->
+        <!---start-top-nav==-->
+
+        <div class="top-nav">
+          <ul>
+            <li class="active"><a class="scroll" href="#home">Home</a></li>
+
+            <li><a class="scroll" href="#features">Projekt</a></li>
+
+            <li><a class="scroll" href="#show">Ukážka</a></li>
+
+            <li><a class="scroll" href="#team">O nás</a></li>
+
+            <li><a class="scroll" href="#plans">Plán</a></li>
+
+            <li><a class="scroll" href="#contact">Kontakt</a></li>
+
+            <li><a href="https://www.dropbox.com/sh/g2873o1ciswgbyj/LIHSqvNv7R" target="_blank">Dokumenty</a></li>
+          </ul>
+        </div>
+
+        <div class="clear"></div><!---End-top-nav==-->
+      </div>
+    </div><!---End-Header==-->
+    <!---start-banner==-->
+
+    <div class="banner">
+      <div class="wrap">
+        <div class="banner-left-pic">
+          <a href="#"><img src="images/iphone.png" title="image-name"></a>
+        </div>
+
+        <div class="banner-left-info">
+          <h2>Interaktívna hra s multimediálnym obsahom</h2>
+
+          <h1>Eiva</h1>
+
+          <p>Zahraj si s kamarátmi hru Eiva na nasledujúcich platformách:</p><a class="button" href="#"><img src="images/icons/windows.png" title="download"></a> <a class="button" href="#"><img src=
+          "images/icons/linux.png" title="download"></a> <a class="button" href="#"><img src="images/icons/mac.png" title="download"></a> <a class="button" href="#"><img src=
+          "images/icons/android.png" title="download"></a> <a class="button" href="#"><img src="images/icons/ios.png" title="download"></a> <a class="button" href=
+          "https://apps.facebook.com/eiva_gwp/"><img src="images/icons/facebook.png" title="download"></a> <a class="button" href="#"><img src="images/icons/browsers.png" title="download"></a>
+          <a class="button" href="#"><img src="images/icons/unity.png" title="download"></a>
+
+          <div class="clear"></div><!---<span>Also available for<a href="#">iphone</a> and <a href="#">ipad</a></span>==-->
+        </div>
+
+        <div class="clear"></div>
+      </div><!---End-banner==-->
+    </div>
+  </div>
+
+  <div class="clear"></div><!---start-content==-->
+
+  <div class="content">
+    <div class="features" id="features">
+      <div class="wrap">
+        <div class="features-grids">
+          <div class="Features-grid">
+            <h3>Eiva</h3>
+
+            <p>Pre našu hru sme vybrali názov EIVA, čo je skratka od Efficient Interactive Video Anotation. Toto spojenie vystihuje jej celkový zámer.</p>
+          </div>
+
+          <div class="Features-grid">
+            <h3>Koncept</h3>
+
+            <p>Eiva je postavená na princípe úspešnej spoločenskej hry <a href="http://en.wikipedia.org/wiki/Dixit_(card_game)" target="_blank">Dixit</a> ocenenej titulom Hra roka 2010 v Nemecku. V
+            tejto hre sa používajú ako karty rôznorodé obrázky, no my narozdiel od nej používame videá, resp. krátke animácie, záskané z populárnych portálov ako napr. <a href="http://9gag.com/"
+            target="_blank">9GAG</a>.</p>
+          </div>
+
+          <div class="Features-grid last">
+            <h3>Cieľ</h3>
+
+            <p>Hlavným účelom hry Eiva je zabaviť hráčov, ale tiež chceme aby z nej bol úžitok a kreativitu používateľov chceme využiť na získanie užitočných dát.</p>
+          </div>
+
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clear"></div><!---start-videos=-->
+
+    <div class="videos" id="show">
+      <h3>Ukážka hry</h3>
+
+      <ul class="rslides" id="slider">
+        <li>
+          <img alt="" src="images/slideshow/4.png">
+
+          <p class="caption">Menu hry.</p>
+        </li>
+
+        <li>
+          <img alt="" src="images/slideshow/1.png">
+
+          <p class="caption">Zoznam herných miestností.</p>
+        </li>
+
+        <li>
+          <img alt="" src="images/slideshow/3.png">
+
+          <p class="caption">Lobby.</p>
+        </li>
+
+        <li>
+          <img alt="" src="images/slideshow/7.png">
+
+          <p class="caption">Výber videa a indície rozprávačom.</p>
+        </li>
+
+        <li>
+          <img alt="" src="images/slideshow/6.png">
+
+          <p class="caption">Výber videa hráčom na základe indície.</p>
+        </li>
+
+        <li>
+          <img alt="" src="images/slideshow/2.png">
+
+          <p class="caption">Hádanie videa vybraného rozprávačom na základe indície.</p>
+        </li>
+
+        <li>
+          <img alt="" src="images/slideshow/5.png">
+
+          <p class="caption">Zobrazenie videí, hlasov a výsledkov.</p>
+        </li>
+      </ul>
+    </div><!---End-videos=-->
+
+    <div class="clear"></div><!---start-Team=-->
+
+    <div class="sub-about-grids" id="team">
+      <h3>O nás</h3>
+
+      <div class="wrap">
+        <div class="sub-about-grid" alias="JS">
+          <img src="images/team/JakubSimko.jpg" title="Jakub Šimko">
+
+          <h4>Ing. Jakub Šimko, PhD.</h4><span>vedúci práce</span>
+        </div>
+
+        <div class="sub-about-grid" alias="VM">
+          <img src="images/team/ViktorMaruna.jpg" title="Viktor Maruna">
+
+          <h4>Bc. Viktor Maruna</h4><span>vedúci tímu</span>
+        </div>
+
+        <div class="sub-about-grid" alias="PJ">
+          <img src="images/team/PeterJurkovic.jpg" title="Peter Jurkovič">
+
+          <h4>Bc. Peter Jurkovič</h4><span>zástupca vedúceho tímu</span>
+        </div>
+
+        <div class="sub-about-grid" alias="JK">
+          <img src="images/team/JanKebisek.jpg" title="Ján Kebísek">
+
+          <h4>Bc. Ján Kebísek</h4><span>manažér vývoja</span>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="sub-about-grid" alias="MK">
+          <img src="images/team/MarianKuruc.jpg" title="Marián Kuruc">
+
+          <h4>Bc. Marián Kuruc</h4><span>hlavný architekt</span>
+        </div>
+
+        <div class="sub-about-grid" alias="JB">
+          <img src="images/team/JaroslavBucko.jpg" title="Jaroslav Bucko">
+
+          <h4>Bc. Jaroslav Bucko</h4><span>manažér kvality</span>
+        </div>
+
+        <div class="sub-about-grid" alias="MC">
+          <img src="images/team/MatejCarsky.jpg" title="Matej Čársky">
+
+          <h4>Bc. Matej Čársky</h4><span>manažér dokumentácie</span>
+        </div>
+
+        <div class="sub-about-grid" alias="MV">
+          <img src="images/team/MateVangel.jpg" title="Máté Vangel">
+
+          <h4>Bc. Máté Vangel</h4><span>manažér podporných prostriedkov</span>
+        </div>
+
+        <div class="clear"></div>
+      </div>
+    </div><!---End-Team=-->
+    <!---start-videos=-->
+
+    <div class="news" id="plans">
+      <div class="wrap">
+        <h3>Plán riešenia projektu</h3>
+
+        <div class="news-grids">
+          <div class="News-grid">
+            <h3>Letný semester</h3>
+
+            <h4>9. šprint (Dominika)</h4>
+
+            <p>oprava chýb, testovanie, príprava na IIT.SRC 2014</p>
+
+            <h4>8. šprint (Daniela)</h4>
+
+            <p>analýza metadát, Facebook integrácia, riešenie kompatibility na rôznych zariadeniach, príprava na IIT.SRC 2014</p>
+
+            <h4>7. šprint (Jana)</h4>
+
+            <p>štatistiky v hre, achievmenty v hre, redesign GUI, dotazníky a prieskum ohľadne MEME, pridanie animácií z 9GAG, príprava na IIT.SRC 2014</p>
+
+            <h4>6. šprint (Karolína)</h4>
+
+            <p>časovanie v hre, chat v lobby, redesign GUI</p>
+          </div>
+
+          <div class="News-grid last">
+            <h3>Zimný semester</h3>
+
+            <h4>1. šprint (Ellie)</h4>
+
+            <p>výber konceptu hry, vytvorenie webovej stránky, výber technológií</p>
+
+            <h4>2. šprint (Kattie)</h4>
+
+            <p>vytvorenie celkového návrhu projektu, začiatok implementovania hry (registrácia a prihlasovanie, herné lobby)</p>
+
+            <h4>3. šprint (Annie)</h4>
+
+            <p>príprava animácií, začiatok implementácie jedného kola hry</p>
+
+            <h4>4. šprint (Ildikó)</h4>
+
+            <p>dokončenie prechodu celým kolom hry, vytvorenie viackolových hier</p>
+
+            <h4>5. šprint (Oľga)</h4>
+
+            <p>dokončenie rozrobených úloh, oprava chýb, testovanie a vytvorenie funkčnej verzie</p>
+          </div>
+
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div><!---End-videos=-->
+
+    <div class="clear"></div>
+
+    <div class="contact" id="contact">
+      <div class="wrap">
+        <h3>Kontakt</h3>
+
+        <div class="contact-form">
+          <input class="textbox" id="msg_email" onblur="if (this.value == '') {this.value = 'Email';}" onfocus="this.value = '';" type="text" value="Email:"> <input class="textbox" id="msg_subject"
+          onblur="if (this.value == '') {this.value = 'Predmet';}" onfocus="this.value = '';" type="text" value="Predmet:"> 
+          <textarea id="msg_message" onblur="if (this.value == '') {this.value = 'Správa';}" onfocus="this.value = '';">
+Správa
+</textarea> <input onclick="sendMail();" type="submit" value="Poslať">
+        </div>
+
+        <div class="contact-left">
+          <p>V prípade potreby nás zastihnete na:</p>
+
+          <div class="contact-left-grid">
+            <div class="contact-left-grid-pic"><img src="images/map-pin.png" title="pin"></div>
+
+            <div class="contact-left-grid-info">
+              <h5>Slovenská technická univerzita v Bratislave<br>
+              Fakulta informatiky a informačných technológií<br>
+              Ilkovičova 2<br>
+              842 16 Bratislava 4</h5>
+            </div>
+
+            <div class="clear"></div>
+          </div><!---
+                        <div class="contact-left-grid">
+                            <div class="contact-left-grid-pic">
+                                <img src="images/phone-icon.png" title="phone">
+                            </div>
+                            <div class="contact-left-grid-info">
+                                <h5>phone:8000-200-8521,</h5>
+                            </div>
+                            <div class="clear"> </div>
+                        </div>
+                        =-->
+
+          <div class="contact-left-grid">
+            <div class="contact-left-grid-pic"><img src="images/email-icon.png" title="Email"></div>
+
+            <div class="contact-left-grid-info">
+              <h5>Email: timovy-projekt-14-2013-2014@googlegroups.com</h5>
+            </div>
+
+            <div class="clear"></div>
+          </div>
+        </div>
+
+        <div class="clear"></div>
+      </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="copy-right">
+      <!---<p>Design by <a href="http://w3layouts.com/">W3layouts</a></p>==-->
+
+      <p>Design <a href="http://w3layouts.com/">W3layouts</a> modified by Gwappers 2014.</p>
+    </div><script type="text/javascript">
+$(document).ready(function() {
+            /*
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear' 
+            };
+            */
+            
+            $().UItoTop({ easingType: 'easeOutQuart' });
+            
+        });
+    </script> <a href="#" id="toTop" name="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+  </div><!---End-content==-->
+  <!---End-wrap==-->
+</body>
+</html>
