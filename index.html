@@ -14,7 +14,7 @@
         jQuery(document).ready(function($) {
             $(".scroll").click(function(event){     
                 event.preventDefault();
-                var headerHeight = 0;
+                var headerHeight = $(".header").outerHeight();
                 $('html, body').animate({scrollTop:($(this.hash).offset().top - headerHeight)}, 1000);
             });
 
